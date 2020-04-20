@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignments per Student per Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: aliceblue;
+        }
+
+        #menu {
+            border-style: solid;
+            background-color: aliceblue;
+        }
+
+        a {
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            font-weight: bold;
+            opacity: 1.2;
+        }
+
+        button.btn.btn-warning {
+            text-decoration: underline;
+            background-color: blanchedalmond;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Students per Course</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-2" id="menu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trainers.html">Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Students.html">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Assignments.html">Assignments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TrainersPerCourse.html">Trainers<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="StudentsPerCourse.html">Students<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AssignmentsPerCourse.html">Assignments<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AssignmentPerSPerC.html">Assignments<br /> per Student<br /> per
+                            Course</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10" id="forma">
+                <div class="row">
+                    <div class="col-1">
+                        <button class="btn btn-warning" id="add">Add</button>
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-warning" id="edit">Edit & Update</button>
+                    </div>
+                </div>
+                <br />
+                <form action="" novalidate>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Course ID</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <span id="inputGroupSelect01Warning"></span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect02">Student ID</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect02">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <span id="inputGroupSelect02Warning"></span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect03">Assignment ID</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect03">
+                                    <option value="" selected>Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <span id="inputGroupSelect03Warning"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submit-button">ADD ASSIGNMENT PER STUDENT PER
+                        COURSE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="validateAssignmentsPerSPerC.js"></script>
+    <script>
+        $("#add").click(function () {
+            $("#submit-button").html("ADD ASSIGNMENT PER STUDENT PER COURSE");
+        });
+
+        $("#edit").click(function () {
+            $("#submit-button").html("UPDATE ASSIGNMENT PER STUDENT PER COURSE");
+        });
+    </script>
+
+</body>
+
+</html>

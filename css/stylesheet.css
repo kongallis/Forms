@@ -28,3 +28,13 @@ button.btn.btn-warning {
     background-color: blanchedalmond;
     border: 0;
 }
+
+h1 {
+    margin: 0px;
+}
+
+#success-alert {
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 0px;
+}

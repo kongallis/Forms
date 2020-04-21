@@ -69,6 +69,17 @@ function validateDateOfBirth() {
         $("#dateOfBirth").css("border-color", "red");
         return false;
     }
+
+    D_1 = dateOfBirth.val().split("-");
+    console.log(D_1);
+
+    if (D_1[0] >= 2020 || D_1[0] <= 1940) {
+        $("#end_dateWarning").html("Please insert a valid date of birth.");
+        $("#end_dateWarning").css("color", "red");
+        $("#end_date").css("border-width", "2px");
+        $("#end_date").css("border-color", "red");
+        return false;
+    }
 }
 
 function validateTuitionFees() {

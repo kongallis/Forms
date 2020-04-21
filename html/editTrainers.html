@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Trainers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+
+<body>
+
+
+
+    <h1>Trainers</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-2" id="menu">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="addCourses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addTrainers.html">Trainers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addStudents.html">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addAssignments.html">Assignments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addTrainersPerCourse.html">Trainers<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addStudentsPerCourse.html">Students<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addAssignmentsPerCourse.html">Assignments<br /> per Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addAssignmentPerSPerC.html">Assignments<br /> per Student<br /> per
+                            Course</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10" id="forma">
+                <div class="row">
+                    <div class="col-1">
+                        <a href="addTrainers.html" class="btn btn-warning" id="add">Add</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="editTrainers.html" class="btn btn-warning" id="edit">Edit</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="updateTrainers.html" class="btn btn-warning" id="update">Update</a>
+                    </div>
+                </div>
+                <br />
+                <form action="" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" name="firstName" id="firstName" class="form-control">
+                                <span id="firstNameWarning"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" name="lastName" id="lastName" class="form-control">
+                                <span id="lastNameWarning"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" class="form-control">
+                                <span id="subjectWarning"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-button">EDIT TRAINER</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="../js/validateTrainers.js"></script>
+
+
+
+</body>
+
+</html>

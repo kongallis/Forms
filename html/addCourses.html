@@ -5,59 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignments</title>
+    <title>Add Courses</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 
 <body>
-
-
-
-    <h1>Assignments</h1>
+    <div class="alert alert-success" role="alert" id="success-alert"></div>
+    <h1>Courses</h1>
     <div class="container">
         <div class="row">
             <div class="col-2" id="menu">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="Courses.html">Courses</a>
+                        <a class="nav-link active" href="addCourses.html">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Trainers.html">Trainers</a>
+                        <a class="nav-link" href="addTrainers.html">Trainers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Students.html">Students</a>
+                        <a class="nav-link" href="addStudents.html">Students</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Assignments.html">Assignments</a>
+                        <a class="nav-link" href="addAssignments.html">Assignments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="TrainersPerCourse.html">Trainers<br /> per Course</a>
+                        <a class="nav-link" href="addTrainersPerCourse.html">Trainers<br /> per Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="StudentsPerCourse.html">Students<br /> per Course</a>
+                        <a class="nav-link" href="addStudentsPerCourse.html">Students<br /> per Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AssignmentsPerCourse.html">Assignments<br /> per Course</a>
+                        <a class="nav-link" href="addAssignmentsPerCourse.html">Assignments<br /> per Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="AssignmentPerSPerC.html">Assignments<br /> per Student<br /> per
+                        <a class="nav-link" href="addAssignmentPerSPerC.html">Assignments<br /> per Student<br /> per
                             Course</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-10" id="forma">
+            <div class="col-10">
                 <div class="row">
                     <div class="col-1">
-                        <button class="btn btn-warning" id="add">Add</button>
+                        <a href="addCourses.html" class="btn btn-warning" id="add">Add</a>
                     </div>
                     <div class="col-1">
-                        <button class="btn btn-warning" id="edit">Edit & Update</button>
+                        <a href="editCourses.html" class="btn btn-warning" id="edit">Edit</a>
+                    </div>
+                    <div class="col-1">
+                        <a href="updateCourses.html" class="btn btn-warning" id="update">Update</a>
                     </div>
                 </div>
                 <br />
-                <form action="" novalidate>
+                <form id="forma" method="POST" novalidate>
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
@@ -68,30 +69,38 @@
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label for="description">Description</label>
-                                <input type="text" name="description" id="description" class="form-control">
-                                <span id="descriptionWarning"></span>
+                                <label for="stream">Stream</label>
+                                <input type="text" name="stream" id="stream" class="form-control">
+                                <span id="streamWarning"></span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="subDateTime">Submission Date</label>
-                                <input type="date" name="subDateTime" id="subDateTime" class="form-control">
-                                <span id="subDateTimeWarning"></span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="totalMark">Total Mark</label>
-                                <input type="number" name="totalMark" id="totalMark" class="form-control" min="0"
-                                    max="100">
-                                <span id="totalMarkWarning"></span>
+                                <label for="type">Type</label>
+                                <input type="text" name="type" id="type" class="form-control">
+                                <span id="typeWarning"></span>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submit-button">ADD ASSIGNMENT</button>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="start_date">Staring date</label>
+                                <input type="date" name="start_date" id="start_date" class="form-control">
+                                <span id="start_dateWarning"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="end_date">Ending date</label>
+                                <input type="date" name="end_date" id="end_date" class="form-control">
+                                <span id="end_dateWarning"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-button">ADD COURSE</button>
                 </form>
             </div>
         </div>
@@ -113,17 +122,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script src="../js/validateAssignments.js"></script>
-    <script>
-        $("#add").click(function () {
-            $("#submit-button").html("ADD ASSIGNMENT");
-        });
-
-        $("#edit").click(function () {
-            $("#submit-button").html("UPDATE ASSIGNMENT");
-        });
-    </script>
-
+    <script src="../js/validateCourses.js"></script>
 
 </body>
 

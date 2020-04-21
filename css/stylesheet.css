@@ -1,0 +1,30 @@
+body {
+    background-color: blanchedalmond;
+
+}
+
+h1 {
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#menu {
+    border-style: solid;
+    background-color: aliceblue;
+}
+
+a {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+a:hover {
+    font-weight: bold;
+    opacity: 1.2;
+}
+
+button.btn.btn-warning {
+    text-decoration: underline;
+    background-color: blanchedalmond;
+    border: 0;
+}

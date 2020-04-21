@@ -83,11 +83,12 @@ function validateTotalMark() {
 
 
 $("#submit-button").click(() => {
+
+    $("#forma").submit(event => {
+        event.preventDefault();
+    });
     validateTitle();
     validateDescription();
     validateSubDateTime();
     validateTotalMark();
-    $("#forma").submit(event => {
-        event.preventDefault();
-    });
 });

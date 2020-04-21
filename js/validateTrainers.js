@@ -88,10 +88,12 @@ function validateSubject() {
 
 
 $("#submit-button").click(() => {
-    validateFirstName();
-    validateLastName();
-    validateSubject();
+
     $("#forma").submit(event => {
         event.preventDefault();
     });
+    validateFirstName();
+    validateLastName();
+    validateSubject();
+
 });

@@ -6,9 +6,10 @@ const end_date = $("#end_date");
 const forma = document.getElementById("forma");
 
 forma.addEventListener('submit', (e) => {
-    e.preventDefault();
 
+    e.preventDefault();
     validateFields();
+
 
 
 });

@@ -30,6 +30,7 @@ function validateTitle() {
         $("#title").css("border-color", "red");
         return false;
     }
+    return true;
 }
 
 function validateDescription() {
@@ -57,6 +58,7 @@ function validateDescription() {
         return false;
 
     }
+    return true;
 }
 
 function validateSubDateTime() {
@@ -67,6 +69,7 @@ function validateSubDateTime() {
         $("#subDateTime").css("border-color", "red");
         return false;
     }
+    return true;
 }
 
 function validateTotalMark() {
@@ -77,18 +80,29 @@ function validateTotalMark() {
         $("#totalMark").css("border-color", "red");
         return false;
     }
+    return true;
 }
 
 
 
 
-$("#submit-button").click(() => {
-
-    $("#forma").submit(event => {
-        event.preventDefault();
-    });
+$("#submit-button").click((e) => {
     validateTitle();
     validateDescription();
     validateSubDateTime();
     validateTotalMark();
+
+    if (validateTitle() &&
+        validateDescription() &&
+        validateSubDateTime() &&
+        validateTotalMark()) {
+        console.log(validateTitle(), validateDescription(), validateSubDateTime(), validateTotalMark());
+        $("h1").prepend('<div class="alert alert-success" style="margin-bottom: 0; border: 0; padding:0; text-align: center;" role="alert"><b>SUCCESSFUL INSERT!</b></div>');
+    } else {
+        e.preventDefault();
+        console.log(validateTitle(), validateDescription(), validateSubDateTime(), validateTotalMark());
+    }
+
+
+
 });

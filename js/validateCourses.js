@@ -1,18 +1,10 @@
-const title = $("#title");
-const stream = $("#stream");
-const type = $("#type");
-const start_date = $("#start_date");
-const end_date = $("#end_date");
-const forma = document.getElementById("forma");
-
-forma.addEventListener('submit', (e) => {
-
-    e.preventDefault();
-    validateFields();
+var title = $("#title");
+var stream = $("#stream");
+var type = $("#type");
+var start_date = $("#start_date");
+var end_date = $("#end_date");
 
 
-
-});
 
 function validateTitle() {
 
@@ -38,7 +30,7 @@ function validateTitle() {
         $("#title").css("border-color", "red");
         return false;
     }
-
+    return true;
 }
 
 function validateStream() {
@@ -64,7 +56,7 @@ function validateStream() {
         $("#stream").css("border-color", "red");
         return false;
     }
-
+    return true;
 }
 
 function validateType() {
@@ -91,7 +83,7 @@ function validateType() {
         return false;
 
     }
-
+    return true;
 }
 
 function validateStartDate() {
@@ -103,7 +95,7 @@ function validateStartDate() {
         $("#start_date").css("border-color", "red");
         return false;
     }
-
+    return true;
 }
 
 function validateEndDate() {
@@ -126,14 +118,29 @@ function validateEndDate() {
         $("#end_date").css("border-color", "red");
         return false;
     }
-
+    return true;
 }
 
 
-function validateFields() {
+$("#submit-button").click((event) => {
+
     validateTitle();
     validateStream();
     validateType();
     validateStartDate();
     validateEndDate();
-}
+
+    if (validateTitle() &&
+        validateStream() &&
+        validateType() &&
+        validateStartDate() &&
+        validateEndDate()) {
+        $("h1").prepend('<div class="alert alert-success" style="margin-bottom: 0; border: 0; padding:0; text-align: center;" role="alert"><b>SUCCESSFUL INSERT!</b></div>');
+
+    } else {
+        event.preventDefault();
+
+    }
+
+
+});

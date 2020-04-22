@@ -34,11 +34,15 @@ function validateAssignmentId() {
     }
 }
 
-$("#submit-button").click(() => {
+$("#submit-button").click((e) => {
     validateCourseId();
     validateStudentId();
     validateAssignmentId();
-    $("#forma").submit(event => {
-        event.preventDefault();
-    });
+    if (validateCourseId() &&
+        validateStudentId() &&
+        validateAssignmentId()) {
+        $("h1").prepend('<div class="alert alert-success" style="margin-bottom: 0; border: 0; padding:0; text-align: center;" role="alert"><b>SUCCESSFUL INSERT!</b></div>');
+    } else {
+        e.preventDefault();
+    }
 });

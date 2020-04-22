@@ -22,10 +22,13 @@ function validateStudentId() {
     }
 }
 
-$("#submit-button").click(() => {
+$("#submit-button").click((e) => {
     validateCourseId();
     validateStudentId();
-    $("#forma").submit(event => {
-        event.preventDefault();
-    });
+    if (validateCourseId() &&
+        validateStudentId()) {
+        $("h1").prepend('<div class="alert alert-success" style="margin-bottom: 0; border: 0; padding:0; text-align: center;" role="alert"><b>SUCCESSFUL INSERT!</b></div>');
+    } else {
+        e.preventDefault();
+    }
 });

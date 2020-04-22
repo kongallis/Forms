@@ -1,14 +1,13 @@
 var firstName = $("#firstName");
 var lastName = $("#lastName");
 var subject = $("#subject");
-var forma = $("#forma");
 
 
 
 
 function validateFirstName() {
 
-    if (firstName.val() == null || firstName.val() == "") {
+    if (firstName.val() == null || firstName.val() === "") {
         $("#firstNameWarning").html("Please insert a first name.");
         $("#firstNameWarning").css("color", "red");
         $("#firstName").css("border-width", "2px");
@@ -29,8 +28,8 @@ function validateFirstName() {
         $("#firstName").css("border-width", "2px");
         $("#firstName").css("border-color", "red");
         return false;
-
     }
+    return true;
 }
 
 function validateLastName() {
@@ -58,6 +57,7 @@ function validateLastName() {
         return false;
 
     }
+    return true;
 }
 
 function validateSubject() {
@@ -84,16 +84,26 @@ function validateSubject() {
         return false;
 
     }
+    return true;
 }
 
 
-$("#submit-button").click(() => {
 
-    $("#forma").submit(event => {
-        event.preventDefault();
-    });
+
+$("#submit-button").click((event) => {
     validateFirstName();
     validateLastName();
     validateSubject();
+    if ((validateFirstName() == false) ||
+        (validateLastName() == false) ||
+        (validateSubject() == false)) {
+        event.preventDefault();
+    } else {
+
+        $("h1").prepend('<div class="alert alert-success" style="margin-bottom: 0; border: 0; padding:0; text-align: center;" role="alert"><b>SUCCESSFUL INSERT!</b></div>');
+
+    }
+
+
 
 });
